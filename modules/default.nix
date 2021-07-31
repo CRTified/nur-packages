@@ -1,5 +1,7 @@
 {
   # Add your NixOS modules here
   #
-  # my-module = ./my-module;
+  libvirt = ./libvirt.nix;
+  vfio = ./vfio.nix;
+  virtualisation.nix = ./virtualisation.nix;
 }

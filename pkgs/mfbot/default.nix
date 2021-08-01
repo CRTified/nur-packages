@@ -3,7 +3,7 @@ let
   pkg = stdenv.mkDerivation rec {
     pname = "mfbot-binary";
     version = "5.3.3.0";
-    
+
     src = fetchurl {
       url = "https://download.mfbot.de/v${version}/MFBot_Konsole_x86_64";
       hash = "sha256:0rby0qjypvbw630afpwvgrh56c3al3838bmnk5z0yr6a31c72a70";
@@ -29,13 +29,8 @@ let
       platforms = [ "x86_64-linux" ];
     };
   };
-in
-buildFHSUserEnv {
+in buildFHSUserEnv {
   name = "mfbot";
-  targetPkgs = pkgs: (with pkgs;
-    [
-      mono
-      sqlite
-    ]);
+  targetPkgs = pkgs: (with pkgs; [ mono sqlite ]);
   runScript = "${pkg.outPath}/bin/MFBot_Konsole";
 }

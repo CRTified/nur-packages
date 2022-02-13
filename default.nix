@@ -14,6 +14,8 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
+  klipper-firmware = pkgs.callPackage ./pkgs/klipper-firmware { };
+
   mfbot = pkgs.callPackage ./pkgs/mfbot { };
 
   mfc_l2710dn = pkgs.callPackage ./pkgs/mfc_l2710dn { };

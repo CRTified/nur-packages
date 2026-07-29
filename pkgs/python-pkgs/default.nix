@@ -231,7 +231,6 @@ rec {
       cp -r ufade assets "$sitePackages/"
       install -Dm644 bu_pw.txt "$sitePackages/bu_pw.txt"
       install -Dm755 ufade.py "$sitePackages/ufade.py"
-      mkdir -p "$sitePackages/ufade_developer"
 
       printf '%s\n' \
         '#!${python.interpreter}' \

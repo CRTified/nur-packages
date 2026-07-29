@@ -103,7 +103,7 @@ rec {
   };
 
   simpleaudio_patched = buildPythonPackage rec {
-    pname = "simpleaudio-patched";
+    pname = "simpleaudio_patched";
     version = "1.0.5";
     pyproject = true;
 

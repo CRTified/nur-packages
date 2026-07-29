@@ -55,6 +55,10 @@ rec {
       hash = "sha256-M1Rakknls/qu3x7ngv5r38y9wPrg3vuhzuM2pl+T0co=";
     };
 
+    nativeBuildInputs = [
+      setuptools
+    ];
+
     propagatedBuildInputs = [
       nskeyedunarchiver
       pycryptodome
@@ -64,10 +68,6 @@ rec {
       substituteInPlace setup.py \
         --replace-fail "from iOSbackup import __version__" "__version__ = \"${version}\""
     '';
-
-    nativeBuildInputs = [
-      setuptools
-    ];
 
     doCheck = false;
 

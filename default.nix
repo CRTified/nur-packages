@@ -18,7 +18,7 @@
   hl_l2370dn = pkgs.callPackage ./pkgs/hl_l2370dn { };
 
   python3Packages = pkgs.recurseIntoAttrs
-    (pkgs.python3Packages.callPackage ./pkgs/python-pkgs { });
+    (pkgs.python311Packages.callPackage ./pkgs/python-pkgs { });
 
   self-service-password = pkgs.callPackage ./pkgs/self-service-password { };
 

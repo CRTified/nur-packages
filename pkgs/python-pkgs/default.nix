@@ -45,8 +45,6 @@ rec {
     pythonImportsCheck = [ "NSKeyedUnArchiver" ];
   };
 
-  NSKeyedUnArchiver = nskeyedunarchiver;
-
   iosbackup = buildPythonPackage rec {
     pname = "iOSbackup";
     version = "0.9.925";
@@ -75,8 +73,6 @@ rec {
 
     pythonImportsCheck = [ "iOSbackup" ];
   };
-
-  iOSbackup = iosbackup;
 
   pyiosbackup = buildPythonPackage rec {
     pname = "pyiosbackup";
@@ -129,8 +125,6 @@ rec {
 
     pythonImportsCheck = [ "simpleaudio" ];
   };
-
-  "simpleaudio-patched" = simpleaudio_patched;
 
   tkcalendar = buildPythonPackage rec {
     pname = "tkcalendar";

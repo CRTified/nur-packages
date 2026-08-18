@@ -23,4 +23,7 @@
   self-service-password = pkgs.callPackage ./pkgs/self-service-password { };
 
   unflac = pkgs.callPackage ./pkgs/unflac { };
+
+  kalico = pkgs.callPackage ./pkgs/kalico { };
+  kalicoPlugins = import ./pkgs/kalico/plugins { inherit pkgs; };
 }
